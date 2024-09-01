@@ -1,6 +1,8 @@
 require 'matrix'
 
 class Matrix
+  # 行列の同じ場所の要素同士の積を計算する関数
+  # アダマール積とも呼ばれる
   def hadamard(other)
     Matrix.build(row_count, column_count) do |i, j|
       self[i, j] * other[i, j]
